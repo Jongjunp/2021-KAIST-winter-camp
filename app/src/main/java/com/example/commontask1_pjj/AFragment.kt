@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class AFragment : Fragment() {
-    val dataArray = ArrayList<ListItem>()
+    private val dataArray = ArrayList<ListItem>()
     lateinit var recyclerView1: RecyclerView
 
     override fun onCreateView(

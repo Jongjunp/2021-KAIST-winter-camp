@@ -17,7 +17,8 @@ class ViewAdapter(val context: Context, val dataArray: ArrayList<ListItem>) : Re
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
+        val item = dataArray[position]
+        holder.bind(item)
     }
     //data 저장할 item list
    /* var data = listOf<ListItem>()

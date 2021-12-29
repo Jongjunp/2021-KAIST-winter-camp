@@ -10,8 +10,8 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     var v_phone: TextView=view.findViewById(R.id.item_phone)
 
     //data setting
-    fun bind(data: ListItem){
-        v_name.text = data.name
-        v_phone.text = data.phone
+    fun bind(dataArray: ListItem){
+        v_name.text = dataArray.name
+        v_phone.text = dataArray.phone
     }
 }

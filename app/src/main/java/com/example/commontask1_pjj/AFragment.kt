@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -20,10 +21,16 @@ class AFragment : Fragment() {
         var rootView = inflater.inflate(R.layout.fragment_a, container, false)
         dataArray.add(ListItem("홍길동", "010-1234-5678"))
         dataArray.add(ListItem("이름", "010-0987-6543"))
+        dataArray.add(ListItem("이름", "010-0987-6543"))
+        dataArray.add(ListItem("이름", "010-0987-6543"))
+        dataArray.add(ListItem("이름", "010-0987-6543"))
+        dataArray.add(ListItem("이름", "010-0987-6543"))
+        dataArray.add(ListItem("이름", "010-0987-6543"))
 
         recyclerView1 = rootView.findViewById(R.id.recyclerView)as RecyclerView
         recyclerView1.layoutManager = LinearLayoutManager(requireContext())
         recyclerView1.adapter = ViewAdapter(requireContext(), dataArray)
+        //recyclerView1.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
         return rootView
     }

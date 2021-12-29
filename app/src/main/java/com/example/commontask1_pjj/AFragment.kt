@@ -30,7 +30,7 @@ class AFragment : Fragment() {
         recyclerView1 = rootView.findViewById(R.id.recyclerView)as RecyclerView
         recyclerView1.layoutManager = LinearLayoutManager(requireContext())
         recyclerView1.adapter = ViewAdapter(requireContext(), dataArray)
-        //recyclerView1.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+        recyclerView1.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
 
         return rootView
     }

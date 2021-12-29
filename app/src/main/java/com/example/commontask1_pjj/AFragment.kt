@@ -24,7 +24,7 @@ class AFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         my_adapter = ViewAdapter(this)
         rv.adapter = my_adapter
-        my_adapter = repository.getRepoList()
+        my_adapter.data = repository.getRepoList()
 
     }
 }

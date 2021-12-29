@@ -6,10 +6,8 @@
     android:layout_height="wrap_content"
     android:paddingHorizontal="20dp"
     android:paddingVertical="10dp"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    android:background="@color/purple_500">
+    android:background="@color/purple_500"
+    app:layout_constraintBottom_toTopOf="@+id/tabLayout">
 
     <ImageView
         android:id="@+id/img_rv_photo"

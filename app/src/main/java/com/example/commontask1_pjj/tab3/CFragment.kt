@@ -1,10 +1,11 @@
-package com.example.commontask1_pjj
+package com.example.commontask1_pjj.tab3
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.commontask1_pjj.R
 
 class CFragment : Fragment() {
 

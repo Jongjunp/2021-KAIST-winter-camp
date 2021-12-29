@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.commontask1_pjj.databinding.ActivityMainBinding
+import com.example.commontask1_pjj.tab1.AFragment
+import com.example.commontask1_pjj.tab2.BFragment
+import com.example.commontask1_pjj.tab3.CFragment
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {

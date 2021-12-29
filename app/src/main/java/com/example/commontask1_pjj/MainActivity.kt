@@ -6,9 +6,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.commontask1_pjj.databinding.ActivityMainBinding
-import com.example.commontask1_pjj.tab1.AFragment
-import com.example.commontask1_pjj.tab2.BFragment
-import com.example.commontask1_pjj.tab3.CFragment
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
@@ -28,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             //3. 어댑터와 뷰페이저 연결
             viewPager.adapter = pagerAdapter
             //4. 탭 메뉴의 개수만큼 제목을 목록으로 생성
-            val titles = listOf("PHONE", "IMAGE", "FREE")
+            val titles = listOf("Phone", "B", "C")
             //5. 탭레이아웃과 뷰페이저 연결
             TabLayoutMediator(tabLayout, viewPager) { tab, position ->
                 tab.text = titles.get(position)

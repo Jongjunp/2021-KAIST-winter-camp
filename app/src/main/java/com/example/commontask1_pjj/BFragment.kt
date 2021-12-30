@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
 class BFragment : Fragment() {
     private val dataArray = ArrayList<dataVo>()
@@ -29,7 +30,7 @@ class BFragment : Fragment() {
         dataArray.add(dataVo("이름", ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
 
         recyclerView1 = rootView.findViewById(R.id.recyclerView)as RecyclerView
-        recyclerView1.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView1.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
         recyclerView1.adapter = ViewAdapterB(requireContext(), dataArray)
         recyclerView1.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
 

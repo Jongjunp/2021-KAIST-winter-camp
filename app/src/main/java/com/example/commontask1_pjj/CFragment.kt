@@ -1,4 +1,4 @@
-package com.example.commontask1_pjj.tab3
+package com.example.commontask1_pjj
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

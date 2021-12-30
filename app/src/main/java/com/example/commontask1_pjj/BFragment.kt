@@ -21,18 +21,17 @@ class BFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var rootView = inflater.inflate(R.layout.fragment_b, container, false)
-        dataArray.add(dataVo("홍길동", ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
-        dataArray.add(dataVo("이름", ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
-        dataArray.add(dataVo("이름", ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
-        dataArray.add(dataVo("이름", ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
-        dataArray.add(dataVo("이름", ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
-        dataArray.add(dataVo("이름", ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
-        dataArray.add(dataVo("이름", ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
+        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
+        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
+        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
+        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
+        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
+        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
+        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
 
         recyclerView1 = rootView.findViewById(R.id.recyclerView)as RecyclerView
         recyclerView1.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
         recyclerView1.adapter = ViewAdapterB(requireContext(), dataArray)
-        recyclerView1.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
 
         return rootView
     }

@@ -1,5 +1,6 @@
 package com.example.commontask1_pjj
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,11 +19,15 @@ class BFragment : Fragment() {
     lateinit var recyclerView1: RecyclerView
     lateinit var fabButton: FloatingActionButton
 
+    private val GALLERY = 1
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
 
         var rootView = inflater.inflate(R.layout.fragment_b, container, false)
         for(i in 0 until 10){
@@ -32,7 +37,13 @@ class BFragment : Fragment() {
 
         fabButton = rootView.findViewById(R.id.fab) as FloatingActionButton
         fabButton.setOnClickListener {
-            Toast.makeText(context, "이미지 추가!", Toast.LENGTH_SHORT).show()
+           /* val intent: Intent = Intent(Intent.ACTION_GET_CONTENT)
+            intent.setType("image/*")
+            startActivityForResult(intent,GALLERY)*/
+
+        */
+            val intent = Intent(activity, ReviewActivity::class.java)
+            activity?.startActivity(intent)
         }
 
         recyclerView1 = rootView.findViewById(R.id.recyclerView)as RecyclerView

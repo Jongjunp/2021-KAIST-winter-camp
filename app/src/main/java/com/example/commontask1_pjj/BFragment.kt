@@ -21,13 +21,10 @@ class BFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var rootView = inflater.inflate(R.layout.fragment_b, container, false)
-        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
-        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
-        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
-        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
-        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
-        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
-        dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
+        for(i in 0 until 50){
+            dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
+            dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image02)!!))
+        }
 
         recyclerView1 = rootView.findViewById(R.id.recyclerView)as RecyclerView
         recyclerView1.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)

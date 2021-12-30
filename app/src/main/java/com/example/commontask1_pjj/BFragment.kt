@@ -21,7 +21,7 @@ class BFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         var rootView = inflater.inflate(R.layout.fragment_b, container, false)
-        for(i in 0 until 50){
+        for(i in 0 until 1){
             dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image01)!!))
             dataArray.add(dataVo(ContextCompat.getDrawable(context!!, R.drawable.image02)!!))
         }

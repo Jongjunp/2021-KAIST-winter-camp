@@ -5,7 +5,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 //뷰의 각 요소 관리
-class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+class ViewHolderA(view: View) : RecyclerView.ViewHolder(view) {
     var v_name: TextView=view.findViewById(R.id.item_name)
     var v_phone: TextView=view.findViewById(R.id.item_phone)
 

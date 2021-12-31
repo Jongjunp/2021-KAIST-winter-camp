@@ -19,8 +19,6 @@ class BFragment : Fragment() {
     lateinit var recyclerView1: RecyclerView
     lateinit var fabButton: FloatingActionButton
 
-    private val GALLERY = 1
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

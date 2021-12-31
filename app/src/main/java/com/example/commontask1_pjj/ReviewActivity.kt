@@ -2,17 +2,22 @@ package com.example.commontask1_pjj
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.provider.MediaStore
+import android.util.Base64
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.gson.Gson
+import org.jetbrains.anko.imageBitmap
 import org.jetbrains.anko.spinner
+import java.io.ByteArrayOutputStream
 
 class ReviewActivity : AppCompatActivity() {
     private val GALLERY = 1
@@ -36,6 +41,7 @@ class ReviewActivity : AppCompatActivity() {
         spinner.adapter = ArrayAdapter.createFromResource(this, R.array.itemList, R.layout.support_simple_spinner_dropdown_item)
 
         completeButton.setOnClickListener(View.OnClickListener {
+            val inputImage = findViewById<View>(R.id.imageLoader) as ImageView
             val inputTitle = findViewById<View>(R.id.editTitle) as EditText
             val inputReview = findViewById<View>(R.id.editReview) as EditText
             val inputRating = findViewById<View>(R.id.ratingBar) as RatingBar
@@ -43,6 +49,14 @@ class ReviewActivity : AppCompatActivity() {
 
             val obj = ReviewData()
 
+            fun BitMapToString(bitmap: Bitmap): String {
+                val baos = ByteArrayOutputStream()
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos)
+                val b = baos.toByteArray()
+                return Base64.encodeToString(b, Base64.DEFAULT)
+            }
+
+            obj.movieImage = BitMapToString((inputImage.getDrawable() as BitmapDrawable).bitmap)
             obj.movieTitle = inputTitle.text.toString()
             obj.movieReview = inputReview.text.toString()
             obj.movieRating = inputRating.rating.toString()
@@ -59,8 +73,6 @@ class ReviewActivity : AppCompatActivity() {
             Toast.makeText(this, "Saved!", Toast.LENGTH_SHORT).show()
 
         })
-
-
 
     }
 

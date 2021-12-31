@@ -1,11 +1,13 @@
 package com.example.commontask1_pjj
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.Description
+import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.formatter.PercentFormatter
@@ -23,17 +25,26 @@ class GenreActivity : AppCompatActivity() {
         initPieChart()
 
         setPieChart()
-        //var chartGengre = view.findViewById<BarChart>(R.id.chart_genre)
-        //setChart(chartGengre)
     }
 
     private fun initPieChart(){
         pieChart.setUsePercentValues(false)
-        pieChart.description.text = "별점"
-        pieChart.description.textSize = 16f
+        pieChart.description.isEnabled = false
+        //pieChart.description.text = "별점 분포"
+        //pieChart.description.textSize = 16f
+
+        pieChart.legend.textSize = 20f
     }
 
     fun setPieChart(){
+
+        val colors: ArrayList<Int> = ArrayList()
+        colors.add(Color.parseColor("#FF0000"))
+        colors.add(Color.parseColor("#FFFF00"))
+        colors.add(Color.parseColor("#00FF00"))
+        colors.add(Color.parseColor("#0000FF"))
+        colors.add(Color.parseColor("#8000FF"))
+
 
         //data
         val entries = ArrayList<PieEntry>()
@@ -45,7 +56,7 @@ class GenreActivity : AppCompatActivity() {
 
         val pieDataSet = PieDataSet(entries, "개수")
 
-        pieDataSet.color = resources.getColor(R.color.teal_700)
+        pieDataSet.colors = colors
         pieDataSet.sliceSpace = 5f
 
         val data = PieData(pieDataSet)
@@ -54,57 +65,8 @@ class GenreActivity : AppCompatActivity() {
 
         pieChart.setBackgroundColor(resources.getColor(R.color.white))
 
-        pieChart.animateY(2000)
+        pieChart.animateY(1000)
 
         pieChart.invalidate()
     }
-
-    /*
-    private fun setChartView(view: View){
-        var chartGenre = view.findViewById<BarChart>(R.id.chart_genre)
-        setChart(chartGenre)
-    }
-
-    private fun initBarDataSet(barDataSet: BarDataSet){
-        barDataSet.formSize = 15f
-        barDataSet.setDrawValues(true)
-        barDataSet.valueTextSize = 12f
-    }
-
-    private fun setChart(barChart: BarChart){
-        initBarChart(barChart)
-
-        barChart.setScaleEnabled(false)
-
-        val valueList = ArrayList<Int>()
-        val entries : ArrayList<BarEntry> = ArrayList()
-        val title = "평가"
-
-        //input
-        valueList.add(2)
-        valueList.add(1)
-        valueList.add(7)
-        valueList.add(6)
-        valueList.add(3)
-
-        for(i in 0 until valueList.size){
-            val barEntry = BarEntry(i.toFloat(), valueList[i].toFloat())
-            entries.add(barEntry)
-        }
-
-        val barDataSet = BarDataSet(entries, title)
-        val data = BarData(barDataSet)
-        barChart.data = data
-        barChart.invalidate()
-    }
-
-    private fun initBarChart(barChart: BarChart){
-        barChart.setDrawGridBackground(false)
-        barChart.setDrawBarShadow(false)
-        barChart.setDrawBorders(false)
-
-        val description = Description()
-        barChart.animateY(1000)
-        barChart.animateX(1000)
-    }*/
 }

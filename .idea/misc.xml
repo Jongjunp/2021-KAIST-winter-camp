@@ -6,6 +6,10 @@
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/activity_main.xml" value="0.2046875" />
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/fragment_a.xml" value="0.264" />
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/fragment_b.xml" value="0.2046875" />
+        <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/fragment_c.xml" value="0.19375" />
+        <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/genre_detail.xml" value="0.2046875" />
+        <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/genre_list.xml" value="0.19375" />
+        <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/review_detail.xml" value="0.19375" />
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/rv_item.xml" value="0.264" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/drawable/item_layout_shape.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/layout/activity_main.xml" value="0.3582427536231884" />
@@ -20,7 +24,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

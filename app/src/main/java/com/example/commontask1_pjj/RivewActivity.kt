@@ -1,11 +1,15 @@
 package com.example.commontask1_pjj
 
+import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.lang.Exception
 
 class ReviewActivity : AppCompatActivity() {
     private val GALLERY = 1
@@ -29,19 +33,28 @@ class ReviewActivity : AppCompatActivity() {
         //어댑터 설정
         spinner.adapter = ArrayAdapter.createFromResource(this, R.array.itemList, R.layout.support_simple_spinner_dropdown_item)
 
-        //아이템 선택 리스너
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onNothingSelected(p0: AdapterView<*>?) {
+    }
 
-            }
+    @Override
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
-            override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                var genreName = spinner.selectedItem.toString()
+        val tempView = findViewById<ImageView>(R.id.tempView)
+
+        if( resultCode == Activity.RESULT_OK){
+            if( requestCode == GALLERY)
+            {
+                var ImageData: Uri? = data?.data
+                Toast.makeText(this,ImageData.toString(), Toast.LENGTH_SHORT ).show()
+                try{
+                    val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, ImageData)
+                    tempView.setImageBitmap(bitmap)
+                }
+                catch (e:Exception)
+                {
+                    e.printStackTrace()
+                }
             }
         }
-
-
-
-
     }
 }

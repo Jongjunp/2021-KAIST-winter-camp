@@ -1,17 +1,26 @@
 package com.example.commontask1_pjj
 
+import android.Manifest
+import android.Manifest.permission_group.STORAGE
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.provider.MediaStore
 import android.util.Base64
 import android.view.View
 import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.gson.Gson
@@ -22,6 +31,8 @@ import java.io.ByteArrayOutputStream
 class ReviewActivity : AppCompatActivity() {
     private val GALLERY = 1
 
+    @RequiresApi(Build.VERSION_CODES.O)
+    @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.review_detail)
@@ -41,7 +52,7 @@ class ReviewActivity : AppCompatActivity() {
         spinner.adapter = ArrayAdapter.createFromResource(this, R.array.itemList, R.layout.support_simple_spinner_dropdown_item)
 
         completeButton.setOnClickListener(View.OnClickListener {
-            val inputImage = findViewById<View>(R.id.imageLoader) as ImageView
+            val inputImage = findViewById<View>(R.id.tempView) as ImageView
             val inputTitle = findViewById<View>(R.id.editTitle) as EditText
             val inputReview = findViewById<View>(R.id.editReview) as EditText
             val inputRating = findViewById<View>(R.id.ratingBar) as RatingBar
@@ -56,7 +67,15 @@ class ReviewActivity : AppCompatActivity() {
                 return Base64.encodeToString(b, Base64.DEFAULT)
             }
 
-            obj.movieImage = BitMapToString((inputImage.getDrawable() as BitmapDrawable).bitmap)
+            val drawable = ContextCompat.getDrawable(this, R.id.tempView)!!
+            val bitmapDrawable = drawable as BitmapDrawable
+            val bitmap = bitmapDrawable.bitmap
+            //bitmap to string
+            val stream = ByteArrayOutputStream()
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
+            val bytes = stream.toByteArray()
+
+            obj.movieImage = java.util.Base64.getEncoder().encodeToString(bytes)
             obj.movieTitle = inputTitle.text.toString()
             obj.movieReview = inputReview.text.toString()
             obj.movieRating = inputRating.rating.toString()
@@ -71,6 +90,8 @@ class ReviewActivity : AppCompatActivity() {
             prefsEditor.commit()
 
             Toast.makeText(this, "Saved!", Toast.LENGTH_SHORT).show()
+            //activity 종료
+            finish()
 
         })
 

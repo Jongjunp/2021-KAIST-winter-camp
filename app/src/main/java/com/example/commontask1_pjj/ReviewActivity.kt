@@ -31,6 +31,7 @@ class ReviewActivity : AppCompatActivity() {
         //어댑터 설정
         spinner.adapter = ArrayAdapter.createFromResource(this, R.array.itemList, R.layout.support_simple_spinner_dropdown_item)
 
+
         completeButton.setOnClickListener(View.OnClickListener {
             val inputTitle = findViewById<View>(R.id.editTitle) as EditText
             val inputReview = findViewById<View>(R.id.editReview) as EditText
@@ -39,9 +40,10 @@ class ReviewActivity : AppCompatActivity() {
 
             val obj = ReviewData()
 
+
             obj.movieTitle = inputTitle.text.toString()
             obj.movieReview = inputReview.text.toString()
-            obj.movieRating = inputRating.rating.toString()
+            obj.movieRating = inputRating.rating.toInt().toString()
             obj.movieGenre = inputGenre.selectedItem.toString()
 
             val appSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this.applicationContext)
@@ -56,9 +58,6 @@ class ReviewActivity : AppCompatActivity() {
 
         })
 
-
-
     }
-
 
 }

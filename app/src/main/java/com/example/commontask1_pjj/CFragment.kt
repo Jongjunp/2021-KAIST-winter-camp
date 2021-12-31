@@ -40,10 +40,9 @@ class CFragment : Fragment() {
         recyclerView1.adapter = adapter
         adapter.setOnItemClickListener(object: ViewAdapterC.onItemClickListener{
             override fun onItemClick(position: Int) {
-                //Toast.makeText(context, "test", Toast.LENGTH_SHORT).show()
                 val intent = Intent(activity, GenreActivity::class.java)
+                intent.putExtra("Genre", dataArray[position].genre)
                 activity?.startActivity(intent)
-                //putextra로 data 전달
             }
         })
         recyclerView1.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))

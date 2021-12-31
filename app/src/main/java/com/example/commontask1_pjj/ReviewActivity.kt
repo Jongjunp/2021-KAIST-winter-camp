@@ -1,11 +1,15 @@
 package com.example.commontask1_pjj
 
+import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.preference.PreferenceManager
+import android.provider.MediaStore
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.gson.Gson
 import org.jetbrains.anko.spinner
@@ -58,6 +62,31 @@ class ReviewActivity : AppCompatActivity() {
 
 
 
+    }
+
+    @Override
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        val tempView = findViewById<ImageView>(R.id.tempView)
+        val imageLoader = findViewById<ImageButton>(R.id.imageLoader)
+
+        if( resultCode == Activity.RESULT_OK){
+            if( requestCode == GALLERY)
+            {
+                var ImageData: Uri? = data?.data
+                //Toast.makeText(this,ImageData.toString(), Toast.LENGTH_SHORT ).show()
+                try{
+                    imageLoader.setVisibility(View.INVISIBLE)
+                    tempView.setVisibility(View.VISIBLE)
+                    Glide.with(this).load(ImageData).into(tempView)
+                }
+                catch (e:Exception)
+                {
+                    e.printStackTrace()
+                }
+            }
+        }
     }
 
 

@@ -16,29 +16,15 @@
             android:layout_height="match_parent"
             android:layout_marginTop="10dp">
 
-            <ImageButton
-                android:id="@+id/imageLoader"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:layout_gravity="center"
-                android:adjustViewBounds="true"
-                android:padding="150dp"
-                android:scaleType="fitCenter"
-                android:background="@color/background_gray"
-                android:visibility="visible"
-                android:src="@drawable/image_add_icon"
-                android:contentDescription="Movie Image"/>
-
             <ImageView
-                android:id="@+id/tempView"
+                android:id="@+id/getImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:layout_gravity="center"
                 android:src="@drawable/image_add_icon"
-                android:visibility="invisible" />
+                android:visibility="visible" />
 
         </FrameLayout>
 
@@ -50,7 +36,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/title2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -66,18 +52,15 @@
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
-                android:id="@+id/editTitle"
+                android:id="@+id/getTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_gravity="center"
-                android:ems="10"
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
-                android:inputType="textPersonName"
-                android:minHeight="48dp"
-                android:backgroundTint="@color/light_purple"
-                android:hint="Title of movie"
+                android:textSize="23sp"
+                android:textColor="@color/black"
+                android:text="title"
                 app:layout_constraintStart_toEndOf="@+id/title"/>
 
         </LinearLayout>
@@ -90,7 +73,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/review"
+                android:id="@+id/review2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -103,7 +86,7 @@
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <EditText
-                android:id="@+id/editReview"
+                android:id="@+id/getReview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -125,7 +108,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/genre"
+                android:id="@+id/genre2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -137,7 +120,7 @@
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <Spinner
-                android:id="@+id/genreSpinner"
+                android:id="@+id/getGenreSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -154,7 +137,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/rate"
+                android:id="@+id/rate2"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -167,7 +150,7 @@
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <RatingBar
-                android:id="@+id/ratingBar"
+                android:id="@+id/getRatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -184,7 +167,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/complete_button"
+                android:id="@+id/complete_button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"

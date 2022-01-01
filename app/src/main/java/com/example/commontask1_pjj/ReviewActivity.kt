@@ -13,14 +13,19 @@ import android.os.Build
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.provider.MediaStore
+import android.transition.Transition
 import android.util.Base64
+import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.bumptech.glide.Glide
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.gson.Gson
@@ -60,14 +65,8 @@ class ReviewActivity : AppCompatActivity() {
 
             val obj = ReviewData()
 
-            fun BitMapToString(bitmap: Bitmap): String {
-                val baos = ByteArrayOutputStream()
-                bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos)
-                val b = baos.toByteArray()
-                return Base64.encodeToString(b, Base64.DEFAULT)
-            }
 
-            val drawable = ContextCompat.getDrawable(this, R.id.tempView)!!
+            val drawable = findViewById<ImageView>(R.id.tempView).getDrawable()
             val bitmapDrawable = drawable as BitmapDrawable
             val bitmap = bitmapDrawable.bitmap
             //bitmap to string
@@ -90,6 +89,7 @@ class ReviewActivity : AppCompatActivity() {
             prefsEditor.commit()
 
             Toast.makeText(this, "Saved!", Toast.LENGTH_SHORT).show()
+
             //activity 종료
             finish()
 
@@ -121,6 +121,5 @@ class ReviewActivity : AppCompatActivity() {
             }
         }
     }
-
 
 }

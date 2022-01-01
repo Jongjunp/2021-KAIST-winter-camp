@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
                 tab.text = titles.get(position)
             }.attach()
         }
-
     }
+
 }
 
  class FragmentPagerAdapter(val fragmentList:List<Fragment>, fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {

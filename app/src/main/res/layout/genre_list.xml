@@ -18,11 +18,13 @@
         android:text="Genre Name"
         android:textStyle="bold"
         android:layout_marginLeft="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
         android:textSize="24sp"
         android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <!--
     <TextView
         android:id="@+id/item_count"
         android:layout_width="wrap_content"
@@ -33,6 +35,6 @@
         android:textSize="18sp"
         android:textColor="@color/black"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/item_genre" />
+        app:layout_constraintTop_toBottomOf="@id/item_genre" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,15 +32,5 @@ class ViewAdapterC(val context: Context, val dataArray: ArrayList<genreItem>) : 
     override fun onBindViewHolder(holder: ViewHolderC, position: Int) {
         val item = dataArray[position]
         holder.bind(item)
-
-        /*
-        holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView?.context, GenreActivity::class.java)
-            ContextCompat.startActivity(holder.itemView.context, intent, null)
-        }*/
     }
-
-
-
-
 }

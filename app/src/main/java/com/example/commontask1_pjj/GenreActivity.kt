@@ -96,6 +96,15 @@ class GenreActivity : AppCompatActivity() {
             }
         }
 
+        if(entries.isEmpty())
+        {
+            val noDataText = findViewById<TextView>(R.id.noData)
+            val chart = findViewById<com.github.mikephil.charting.charts.PieChart>(R.id.chart_genre)
+
+            chart.visibility = View.INVISIBLE
+            noDataText.visibility = View.VISIBLE
+
+        }
 
         val pieDataSet = PieDataSet(entries, "")
 

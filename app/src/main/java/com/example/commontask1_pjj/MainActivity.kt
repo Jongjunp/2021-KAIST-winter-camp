@@ -35,8 +35,8 @@ class MainActivity : AppCompatActivity() {
 
 
         }
-
     }
+
 }
 
  class FragmentPagerAdapter(val fragmentList:List<Fragment>, fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {

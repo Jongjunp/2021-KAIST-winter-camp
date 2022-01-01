@@ -21,12 +21,12 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/layout/genre_detail.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/layout/genre_list.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/layout/item_layout.xml" value="0.26222826086956524" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/layout/review_detail.xml" value="0.2" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/layout/review_detail.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/layout/rv_item.xml" value="0.26222826086956524" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

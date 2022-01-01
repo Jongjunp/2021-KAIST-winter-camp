@@ -1,5 +1,9 @@
 package com.example.commontask1_pjj
 
+import android.content.res.Resources
+import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
+import android.util.Base64
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -11,6 +15,8 @@ class ViewHolderB(view: View) : RecyclerView.ViewHolder(view) {
 
     //data setting
     fun bind(dataArray: dataVo){
-        v_photo.setImageDrawable(dataArray.photo)
+        val imageBytes = Base64.decode(dataArray.photo,0)
+        val bitMapImage = BitmapFactory.decodeByteArray(imageBytes,0,imageBytes.size)
+        v_photo.setImageBitmap(bitMapImage)
     }
 }

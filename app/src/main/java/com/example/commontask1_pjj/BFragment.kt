@@ -28,7 +28,7 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 class BFragment : Fragment() {
-    private var dataArray = ArrayList<dataVo>()
+    private var dataArray = ArrayList<DataVo>()
     lateinit var recyclerView1: RecyclerView
     lateinit var fabButton: FloatingActionButton
     lateinit var noImageView: ImageView
@@ -71,7 +71,7 @@ class BFragment : Fragment() {
             val nextKey = i.next()
             val json = appSharedPrefs.getString(nextKey.toString(), "")
             val obj = gson.fromJson(json, ReviewData::class.java)
-            dataArray.add(dataVo(obj.movieImage!!,obj.movieTitle!!,obj.movieRating!!))
+            dataArray.add(DataVo(obj.movieImage!!,obj.movieTitle!!,obj.movieRating!!))
         }
         return rootView
     }
@@ -79,25 +79,33 @@ class BFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
-        val appSharedPrefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
-        val gson = Gson()
-        val keys = appSharedPrefs.all.map { it.key }
-        val i = keys.iterator()
+        recyclerView1 = rootView.findViewById(R.id.recyclerView)as RecyclerView
+        recyclerView1.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+        recyclerView1.adapter = ViewAdapterB(requireContext(), dataArray)
+
+        val appSharedPrefs2 = PreferenceManager.getDefaultSharedPreferences(requireContext())
+        val gson2 = Gson()
+        val keys2 = appSharedPrefs2.all.map { it.key }
+        val i2 = keys2.iterator()
 
         noImageView = rootView.findViewById(R.id.no_image_default) as ImageView
 
-        if (keys.isNotEmpty()) {
+        if (keys2.isNotEmpty()) {
             noImageView.setVisibility(View.INVISIBLE)
             recyclerView1.setVisibility(View.VISIBLE)
         }
         //나중에 최적화하기
         dataArray.clear()
 
-        while(i.hasNext()){
-            val nextKey = i.next()
-            val json = appSharedPrefs.getString(nextKey.toString(), "")
-            val obj = gson.fromJson(json, ReviewData::class.java)
-            dataArray.add(dataVo(obj.movieImage!!,obj.movieTitle!!,obj.movieRating!!))
+        //var json = appSharedPrefs.getString(i.toString(), "")
+        //var obj = gson.fromJson(json, ReviewData::class.java)
+        //dataArray.add(DataVo(obj.movieImage!!,obj.movieTitle!!,obj.movieRating!!))
+
+        while(i2.hasNext()){
+            val nextKey2 = i2.next()
+            val json2 = appSharedPrefs2.getString(nextKey2.toString(), "")
+            val obj2 = gson2.fromJson(json2, ReviewData::class.java)
+            dataArray.add(DataVo(obj2.movieImage!!,obj2.movieTitle!!,obj2.movieRating!!))
         }
     }
 

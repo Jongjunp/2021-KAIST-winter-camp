@@ -67,7 +67,6 @@ class ReviewActivity : AppCompatActivity() {
             val obj = ReviewData()
 
 
-
             val drawable = findViewById<ImageView>(R.id.tempView).getDrawable()
             val bitmapDrawable = drawable as BitmapDrawable
             val bitmap = bitmapDrawable.bitmap

@@ -27,7 +27,7 @@ class ViewHolderB(view: View) : RecyclerView.ViewHolder(view) {
 
     //data setting
     @RequiresApi(Build.VERSION_CODES.O)
-    fun bind(dataArray: dataVo) {
+    fun bind(dataArray: DataVo) {
         val imageBytes = Base64.decode(dataArray.photo, 0)
         val titleBytes = dataArray.title
         val bitMapImage = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)

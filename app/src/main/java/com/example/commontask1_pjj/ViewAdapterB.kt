@@ -11,7 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class ViewAdapterB(val context: Context, val dataArray: ArrayList<dataVo>) : RecyclerView.Adapter<ViewHolderB>() {
+class ViewAdapterB(val context: Context, val dataArray: ArrayList<DataVo>) : RecyclerView.Adapter<ViewHolderB>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderB {
         return ViewHolderB(LayoutInflater.from(context).inflate(R.layout.item_layout, parent, false))

@@ -24,6 +24,7 @@
             android:layout_marginTop="30dp"
             android:textSize="24sp"
             android:textColor="@color/black"
+            android:fontFamily="@font/nanumgothic"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,23 +39,40 @@
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/text_wrap">
 
-        <com.github.mikephil.charting.charts.PieChart
-            android:id="@+id/chart_genre"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:visibility="visible"
-            tools:ignore="MissingConstraints" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
 
-        <TextView
-            android:id="@+id/noData"
-            android:layout_width="wrap_content"
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/chart_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="300dp"
+                android:visibility="visible"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/noData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                android:text="No Data to Show!"
+                android:textSize="30sp"
+                android:textColor="@color/red"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/genre_recyclerView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="invisible"
-            android:text="No Data to Show!"
-            android:textSize="30sp"
-            android:textColor="@color/red"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:paddingBottom="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </LinearLayout>
 

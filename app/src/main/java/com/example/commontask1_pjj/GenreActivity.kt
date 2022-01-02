@@ -9,6 +9,9 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.PieChart
@@ -16,12 +19,17 @@ import com.github.mikephil.charting.components.Description
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.*
+import com.github.mikephil.charting.formatter.IValueFormatter
 import com.github.mikephil.charting.formatter.PercentFormatter
+import com.github.mikephil.charting.formatter.ValueFormatter
+import com.github.mikephil.charting.utils.ViewPortHandler
 import com.google.gson.Gson
+import java.text.NumberFormat
 
 class GenreActivity : AppCompatActivity() {
 
     private lateinit var pieChart: PieChart
+    val dataArray = ArrayList<PercentItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,10 +41,18 @@ class GenreActivity : AppCompatActivity() {
         initPieChart()
 
         setPieChart()
+
+        addData()
+
+        val rootView = findViewById<RecyclerView>(R.id.genre_recyclerView)
+        rootView.layoutManager = LinearLayoutManager(this)
+        rootView.adapter = ViewAdapterGenre(this, dataArray)
+        rootView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+
     }
 
     private fun initPieChart(){
-        pieChart.setUsePercentValues(false)
+        pieChart.setUsePercentValues(true)
 
         pieChart.description.isEnabled = false
         //pieChart.description.textSize = 16f
@@ -56,6 +72,8 @@ class GenreActivity : AppCompatActivity() {
         pieChart.legend.isEnabled = false
     }
 
+    val yVal = Array<Int>(5) { _ -> 0}
+
     private fun setPieChart(){
 
         val colors: ArrayList<Int> = ArrayList()
@@ -64,8 +82,6 @@ class GenreActivity : AppCompatActivity() {
         colors.add(Color.parseColor("#00FF00"))
         colors.add(Color.parseColor("#0000FF"))
         colors.add(Color.parseColor("#8000FF"))
-
-        val yVal = Array<Int>(5) { _ -> 0}
 
         val genreName = findViewById<View>(R.id.item_genre) as TextView
         genreName.text = intent.getStringExtra("Genre") + "영화 별점분포"
@@ -108,22 +124,37 @@ class GenreActivity : AppCompatActivity() {
 
         val pieDataSet = PieDataSet(entries, "")
 
+        val data = PieData(pieDataSet)
+        pieChart.data = data
+        data.setValueTextSize(16f)
+        data.setValueFormatter(object : ValueFormatter(){
+            override fun getFormattedValue(value: Float): String {
+                return "$value%"
+            }
+        })
+
         pieDataSet.colors = colors
         pieDataSet.sliceSpace = 5f
-        pieDataSet.valueLinePart1Length = 0.6f
+        pieDataSet.valueLinePart1Length = 0.5f
         pieDataSet.valueLinePart2Length = 0.3f
         pieDataSet.valueLineWidth = 2f
         pieDataSet.isUsingSliceColorAsValueLineColor = true
         pieDataSet.xValuePosition = PieDataSet.ValuePosition.OUTSIDE_SLICE
 
-        val data = PieData(pieDataSet)
-        pieChart.data = data
-        data.setValueTextSize(20f)
+
 
         pieChart.setBackgroundColor(resources.getColor(R.color.white))
 
         pieChart.animateY(1000,Easing.EaseInOutQuad)
 
         pieChart.invalidate()
+    }
+
+    private fun addData(){
+        dataArray.add(PercentItem("1점", yVal[0].toString() + "개"))
+        dataArray.add(PercentItem("2점", yVal[1].toString() + "개"))
+        dataArray.add(PercentItem("3점", yVal[2].toString() + "개"))
+        dataArray.add(PercentItem("4점", yVal[3].toString() + "개"))
+        dataArray.add(PercentItem("5점", yVal[4].toString() + "개"))
     }
 }

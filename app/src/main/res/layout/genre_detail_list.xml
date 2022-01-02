@@ -20,6 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="star number"
+        android:fontFamily="@font/nanumgothic"
         android:textStyle="bold"
         android:layout_marginLeft="35dp"
         android:paddingBottom="15dp"
@@ -31,10 +32,11 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
-        android:id="@+id/percent"
+        android:id="@+id/cnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="percent"
+        android:text="count"
+        android:fontFamily="@font/nanumgothic"
         android:textStyle="bold"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="30dp"

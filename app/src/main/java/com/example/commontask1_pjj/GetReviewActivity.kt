@@ -29,7 +29,6 @@ class GetReviewActivity : AppCompatActivity() {
         var json = appSharedPrefs.getString(intent.getStringExtra("keyTitle"), "")
         var obj = gson.fromJson(json, ReviewData::class.java)
 
-        //bitmap string 가지고 image load 하는 부분 구현 필요!!
         val image = findViewById<View>(R.id.getImage) as ImageView
         val title = findViewById<View>(R.id.getTitle) as TextView
         val review = findViewById<View>(R.id.getReview) as EditText
@@ -60,6 +59,7 @@ class GetReviewActivity : AppCompatActivity() {
         genre.setSelection(selectionNum)
 
         val completeButton = findViewById<Button>(R.id.complete_button2) as Button
+        val deleteButton = findViewById<Button>(R.id.delete_button) as Button
 
         completeButton.setOnClickListener(View.OnClickListener {
             val obj2 = ReviewData()
@@ -91,6 +91,20 @@ class GetReviewActivity : AppCompatActivity() {
             //activity 종료
             finish()
 
+        })
+
+        deleteButton.setOnClickListener(View.OnClickListener {
+
+            val appSharedPrefs3 = PreferenceManager.getDefaultSharedPreferences(this.applicationContext)
+            val prefsEditor3 = appSharedPrefs3.edit()
+
+            prefsEditor3.remove(intent.getStringExtra("keyTitle"))
+            prefsEditor3.commit()
+
+            Toast.makeText(this, "Deleted!", Toast.LENGTH_SHORT).show()
+
+            //activity 종료
+            finish()
         })
     }
 

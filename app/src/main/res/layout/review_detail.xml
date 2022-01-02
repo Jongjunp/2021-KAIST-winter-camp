@@ -78,6 +78,7 @@
                 android:minHeight="48dp"
                 android:backgroundTint="@color/light_purple"
                 android:hint="Title of movie"
+                android:fontFamily="@font/nanumgothic"
                 app:layout_constraintStart_toEndOf="@+id/title"/>
 
         </LinearLayout>
@@ -112,6 +113,7 @@
                 android:layout_marginEnd="10dp"
                 android:gravity="start|top"
                 android:hint="Writing Review"
+                android:fontFamily="@font/nanumgothic"
                 android:inputType="textMultiLine"
                 android:minHeight="48dp" />
 
@@ -143,6 +145,7 @@
                 android:layout_weight="1"
                 android:layout_marginStart="50dp"
                 android:minHeight="48dp"
+                android:fontFamily="@font/nanumgothic"
                 tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
 

@@ -1,42 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="5dp"
     app:layout_constraintBottom_toTopOf="@+id/tabLayout">
 
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/item_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="1dp"
+        android:clickable="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/round"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/ratingGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/space"
+        app:layout_constraintTop_toTopOf="@+id/space">
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="0.5"
+            android:text="TextView"
+            android:singleLine="true"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="5dp" />
+
+        <ImageView
+            android:id="@+id/ratingStar"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_gravity="right"
+            android:layout_weight="0.3"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/star" />
 
-            <ImageButton
-                android:id="@+id/item_photo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="1dp"
-                android:adjustViewBounds="true"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:scaleType="fitCenter"
-                app:srcCompat="@mipmap/ic_launcher_round" />
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="0.2"
+            android:background="@drawable/round"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
 
-            <TextView
-                android:id="@+id/item_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|right"
-                android:fontFamily="@font/nanumgothic"
-                android:text="TextView" />
-        </LinearLayout>
+    </LinearLayout>
 
-    </FrameLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

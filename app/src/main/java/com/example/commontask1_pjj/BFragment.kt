@@ -71,7 +71,7 @@ class BFragment : Fragment() {
             val nextKey = i.next()
             val json = appSharedPrefs.getString(nextKey.toString(), "")
             val obj = gson.fromJson(json, ReviewData::class.java)
-            dataArray.add(dataVo(obj.movieImage!!,obj.movieTitle!!))
+            dataArray.add(dataVo(obj.movieImage!!,obj.movieTitle!!,obj.movieRating!!))
         }
         return rootView
     }
@@ -97,7 +97,7 @@ class BFragment : Fragment() {
             val nextKey = i.next()
             val json = appSharedPrefs.getString(nextKey.toString(), "")
             val obj = gson.fromJson(json, ReviewData::class.java)
-            dataArray.add(dataVo(obj.movieImage!!,obj.movieTitle!!))
+            dataArray.add(dataVo(obj.movieImage!!,obj.movieTitle!!,obj.movieRating!!))
         }
     }
 

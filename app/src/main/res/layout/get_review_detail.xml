@@ -23,7 +23,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:layout_gravity="center"
-                android:src="@drawable/image_add_icon"
+                android:src="@drawable/no_image"
                 android:visibility="visible" />
 
         </FrameLayout>

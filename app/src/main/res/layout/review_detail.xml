@@ -61,7 +61,7 @@
                 android:paddingLeft="10dp"
                 android:layout_weight="1"
                 android:text="Title"
-                android:textSize="23sp"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"/>
 
@@ -99,7 +99,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="Review"
-                android:textSize="23sp"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"/>
 
@@ -111,6 +111,7 @@
                 android:background="@drawable/item_layout_shape"
                 android:ems="10"
                 android:layout_marginEnd="10dp"
+                android:padding="5dp"
                 android:gravity="start|top"
                 android:hint="Writing Review"
                 android:fontFamily="@font/nanumgothic"
@@ -134,7 +135,7 @@
                 android:paddingLeft="10dp"
                 android:layout_gravity="center"
                 android:text="Genre"
-                android:textSize="23sp"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"/>
 
@@ -158,14 +159,14 @@
 
             <TextView
                 android:id="@+id/rate"
-                android:layout_width="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:paddingLeft="10dp"
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 android:text="Rating"
-                android:textSize="23sp"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"/>
 

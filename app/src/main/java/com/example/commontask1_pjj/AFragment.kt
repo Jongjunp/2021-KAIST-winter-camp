@@ -1,6 +1,8 @@
 package com.example.commontask1_pjj
 
+import android.content.Intent
 import android.content.res.AssetManager
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -42,7 +44,18 @@ class AFragment : Fragment() {
 
         recyclerView1 = rootView.findViewById(R.id.recyclerView)as RecyclerView
         recyclerView1.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView1.adapter = ViewAdapterA(requireContext(), dataArray)
+
+        var adapter = ViewAdapterA(requireContext(), dataArray)
+        recyclerView1.adapter = adapter
+
+        adapter.setOnItemClickListener(object: ViewAdapterA.onItemClickListener{
+            override fun onItemClick(position: Int) {
+                val intent = Intent(Intent.ACTION_DIAL)
+                intent.data = Uri.parse("tel:"+dataArray[position].phone)
+                activity?.startActivity(intent)
+            }
+        })
+
         recyclerView1.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
 
         return rootView

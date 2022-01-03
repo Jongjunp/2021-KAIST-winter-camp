@@ -10,12 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ViewHolderC(view: View, listener: ViewAdapterC.onItemClickListener) : RecyclerView.ViewHolder(view) {
     var v_genre: TextView =view.findViewById(R.id.item_genre)
-    //var v_count: TextView =view.findViewById(R.id.item_count)
 
     //data setting
     fun bind(dataArray: genreItem){
         v_genre.text = dataArray.genre
-        //v_count.text = dataArray.count
     }
 
     init {

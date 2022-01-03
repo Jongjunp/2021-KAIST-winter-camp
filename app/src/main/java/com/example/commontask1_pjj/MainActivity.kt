@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             //3. 어댑터와 뷰페이저 연결
             viewPager.adapter = pagerAdapter
             //4. 탭 메뉴의 개수만큼 제목을 목록으로 생성
-            val titles = listOf("Phone", "Image", "Chart")
+            //val titles = listOf("Phone", "Image", "Chart")
             val icons = listOf(R.drawable.ic_baseline_phone_24, R.drawable.ic_baseline_image_24, R.drawable.ic_baseline_pie_chart_24)
             //5. 탭레이아웃과 뷰페이저 연결
             TabLayoutMediator(tabLayout, viewPager) { tab, position ->

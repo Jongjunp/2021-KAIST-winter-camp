@@ -27,34 +27,6 @@ class CFragment : Fragment() {
     ): View? {
         var rootView = inflater.inflate(R.layout.fragment_c, container, false)
 
-        //val genre = arrayOf("액션/범죄", "드라마/멜로", "SF/판타지", "코미디", "공포/스릴러", "기타")
-        //val cnt = Array<Int>(6) {_ -> 0}
-
-        /*val appSharedPrefs = PreferenceManager.getDefaultSharedPreferences(requireContext())
-        val gson = Gson()
-        val keys = appSharedPrefs.all.map { it.key }
-        val i = keys.iterator()
-
-        while(i.hasNext()){
-            var nextKey = i.next()
-            var json = appSharedPrefs.getString(nextKey.toString(), "")
-            var obj = gson.fromJson(json, ReviewData::class.java)
-
-            for(j: Int in 0..5){
-                if(obj.movieGenre == genre[j])
-                {
-                    cnt[j]+=1
-                }
-            }
-        }*/
-        /*
-        dataArray.add(genreItem("액션/범죄", cnt[0].toString()))
-        dataArray.add(genreItem("드라마/멜로", cnt[1].toString()))
-        dataArray.add(genreItem("SF/판타지", cnt[2].toString()))
-        dataArray.add(genreItem("코미디", cnt[3].toString()))
-        dataArray.add(genreItem("공포/스릴러", cnt[4].toString()))
-        dataArray.add(genreItem("기타", cnt[5].toString()))*/
-
         dataArray.add(genreItem("액션/범죄"))
         dataArray.add(genreItem("드라마/멜로"))
         dataArray.add(genreItem("SF/판타지"))

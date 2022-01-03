@@ -7,8 +7,18 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ViewAdapterA(val context: Context, val dataArray: ArrayList<ListItem>) : RecyclerView.Adapter<ViewHolderA>() {
 
+    interface onItemClickListener{
+        fun onItemClick(position: Int)
+    }
+
+    private lateinit var mListener: onItemClickListener
+
+    fun setOnItemClickListener(listener: onItemClickListener){
+        mListener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderA {
-        return ViewHolderA(LayoutInflater.from(context).inflate(R.layout.rv_item, parent, false))
+        return ViewHolderA(LayoutInflater.from(context).inflate(R.layout.rv_item, parent, false), mListener)
     }
 
     override fun getItemCount(): Int {

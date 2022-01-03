@@ -2,6 +2,7 @@ package com.example.commontask1_pjj
 
 import android.content.Context
 import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.TextureView
@@ -10,6 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -63,6 +65,9 @@ class GenreActivity : AppCompatActivity() {
         pieChart.setDrawEntryLabels(true)
         pieChart.setEntryLabelColor(resources.getColor(R.color.black))
         pieChart.setEntryLabelTextSize(20f)
+        val font = ResourcesCompat.getFont(this, R.font.elicedigitalbaeum)
+        pieChart.setEntryLabelTypeface(font)
+
 
         //pieChart.holeRadius = 30f
         //pieChart.transparentCircleRadius = 40f
@@ -131,6 +136,8 @@ class GenreActivity : AppCompatActivity() {
         val data = PieData(pieDataSet)
         pieChart.data = data
         data.setValueTextSize(16f)
+        val font = ResourcesCompat.getFont(this, R.font.elicedigitalbaeum)
+        data.setValueTypeface(font)
         data.setValueFormatter(object : ValueFormatter(){
             override fun getFormattedValue(value: Float): String {
                 return "$value%"

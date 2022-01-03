@@ -182,6 +182,7 @@
                 android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:layout_gravity="center"
+                android:textColor="@color/white"
                 android:clickable="true"
                 android:text="Complete"
                 android:fontFamily="@font/elicedigitalbaeum"/>
@@ -193,6 +194,7 @@
                 android:layout_margin="20dp"
                 android:layout_weight="1"
                 android:clickable="true"
+                android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:text="Delete"
                 android:fontFamily="@font/elicedigitalbaeum"/>

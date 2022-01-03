@@ -18,8 +18,8 @@
 
             <ImageButton
                 android:id="@+id/imageLoader"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:clickable="true"
                 android:layout_gravity="center"
                 android:adjustViewBounds="true"
@@ -32,12 +32,12 @@
 
             <ImageView
                 android:id="@+id/tempView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_image_not_supported_24"
+                android:src="@drawable/ic_baseline_add_photo_alternate_24"
                 android:visibility="invisible" />
 
         </FrameLayout>
@@ -165,6 +165,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:paddingLeft="10dp"
+                android:singleLine="true"
                 android:layout_weight="1"
                 android:layout_gravity="center"
                 android:text="Rating"
@@ -197,6 +198,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:layout_gravity="center"
+                android:textColor="@color/white"
                 android:clickable="true"
                 android:text="Complete"
                 android:fontFamily="@font/elicedigitalbaeum"/>

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.TextureView
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -115,10 +116,13 @@ class GenreActivity : AppCompatActivity() {
         if(entries.isEmpty())
         {
             val noDataText = findViewById<TextView>(R.id.noData)
+            val noDataImage = findViewById<ImageView>(R.id.noData_image)
             val chart = findViewById<com.github.mikephil.charting.charts.PieChart>(R.id.chart_genre)
 
             chart.visibility = View.INVISIBLE
+            noDataImage.visibility = View.VISIBLE
             noDataText.visibility = View.VISIBLE
+
 
         }
 

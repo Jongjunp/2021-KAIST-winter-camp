@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     android:paddingHorizontal="10dp"
     android:paddingVertical="10dp"
-    android:background="@color/white"
     app:layout_constraintBottom_toTopOf="@+id/tabLayout">
 
     <ImageView

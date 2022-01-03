@@ -10,4 +10,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_purple">#CCB3FF</color>
     <color name="red">#FF0000</color>
+    <color name="tab_color_1">#FFE6EA</color>
+    <color name="tab_color_2">#9398F1</color>
+    <color name="tab_color_3">#01ce75</color>
 </resources>

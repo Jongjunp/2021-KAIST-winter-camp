@@ -163,6 +163,7 @@
                 android:numStars="5"
                 android:stepSize="1"
                 android:rating="0"
+                android:theme="@style/RatingBar"
                 android:layout_marginStart="50dp"
                 android:contentDescription="Rating of Movie"/>
         </LinearLayout>

@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             val icons = listOf(R.drawable.ic_baseline_phone_24, R.drawable.ic_baseline_image_24, R.drawable.ic_baseline_pie_chart_24)
             //5. 탭레이아웃과 뷰페이저 연결
             TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-                tab.text = titles.get(position)
+                //tab.text = titles.get(position)
                 tab.setIcon(icons.get(position))
             }.attach()
 

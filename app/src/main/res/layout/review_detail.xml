@@ -27,7 +27,7 @@
                 android:scaleType="fitCenter"
                 android:background="@color/background_gray"
                 android:visibility="visible"
-                android:src="@drawable/image_add_icon"
+                android:src="@drawable/ic_baseline_add_photo_alternate_24"
                 android:contentDescription="Movie Image"/>
 
             <ImageView
@@ -37,7 +37,7 @@
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:layout_gravity="center"
-                android:src="@drawable/image_add_icon"
+                android:src="@drawable/ic_baseline_image_not_supported_24"
                 android:visibility="invisible" />
 
         </FrameLayout>
@@ -62,6 +62,7 @@
                 android:layout_weight="1"
                 android:text="Title"
                 android:autoSizeTextType="uniform"
+                android:fontFamily="@font/elicedigitalbaeum"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"/>
 
@@ -78,7 +79,7 @@
                 android:minHeight="48dp"
                 android:backgroundTint="@color/light_purple"
                 android:hint="Title of movie"
-                android:fontFamily="@font/nanumgothic"
+                android:fontFamily="@font/elicedigitalbaeum"
                 app:layout_constraintStart_toEndOf="@+id/title"/>
 
         </LinearLayout>
@@ -101,6 +102,7 @@
                 android:text="Review"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
+                android:fontFamily="@font/elicedigitalbaeum"
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <EditText
@@ -114,7 +116,7 @@
                 android:padding="5dp"
                 android:gravity="start|top"
                 android:hint="Writing Review"
-                android:fontFamily="@font/nanumgothic"
+                android:fontFamily="@font/elicedigitalbaeum"
                 android:inputType="textMultiLine"
                 android:minHeight="48dp" />
 
@@ -137,6 +139,7 @@
                 android:text="Genre"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
+                android:fontFamily="@font/elicedigitalbaeum"
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <Spinner
@@ -146,7 +149,6 @@
                 android:layout_weight="1"
                 android:layout_marginStart="50dp"
                 android:minHeight="48dp"
-                android:fontFamily="@font/nanumgothic"
                 tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
 
@@ -168,6 +170,7 @@
                 android:text="Rating"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
+                android:fontFamily="@font/elicedigitalbaeum"
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <RatingBar
@@ -195,7 +198,8 @@
                 android:layout_margin="20dp"
                 android:layout_gravity="center"
                 android:clickable="true"
-                android:text="Complete" />
+                android:text="Complete"
+                android:fontFamily="@font/elicedigitalbaeum"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

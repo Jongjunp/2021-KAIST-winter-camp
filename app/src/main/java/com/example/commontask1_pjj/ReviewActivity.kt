@@ -7,6 +7,7 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.graphics.Typeface
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Build
@@ -54,8 +55,14 @@ class ReviewActivity : AppCompatActivity() {
         val completeButton = findViewById<Button>(R.id.complete_button) as Button
 
         //어댑터 설정
-        spinner.adapter = ArrayAdapter.createFromResource(this, R.array.itemList, R.layout.support_simple_spinner_dropdown_item)
-
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.itemList,
+            R.layout.spinner_layout
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinner.adapter = adapter
+        }
 
         completeButton.setOnClickListener(View.OnClickListener {
             val inputImage = findViewById<View>(R.id.tempView) as ImageView

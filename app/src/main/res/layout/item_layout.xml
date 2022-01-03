@@ -40,6 +40,7 @@
             android:layout_gravity="left"
             android:layout_weight="0.5"
             android:text="TextView"
+            android:fontFamily="@font/elicedigitalbaeum"
             android:singleLine="true"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="5dp"
@@ -52,7 +53,7 @@
             android:layout_gravity="right"
             android:layout_weight="0.3"
             android:scaleType="centerInside"
-            app:srcCompat="@drawable/star" />
+            app:srcCompat="@drawable/ic_baseline_star_24" />
 
         <TextView
             android:id="@+id/rating"
@@ -63,6 +64,7 @@
             android:background="@drawable/round"
             android:singleLine="true"
             android:text="TextView"
+            android:fontFamily="@font/elicedigitalbaeum"
             android:textAlignment="center"
             android:textStyle="bold"
             tools:ignore="RtlCompat" />

@@ -43,7 +43,14 @@ class GetReviewActivity : AppCompatActivity() {
         review.setText(obj.movieReview)
         obj.movieRating?.let { rating.rating = it.toFloat() }
 
-        genre.adapter = ArrayAdapter.createFromResource(this, R.array.itemList, R.layout.support_simple_spinner_dropdown_item)
+        ArrayAdapter.createFromResource(
+            this,
+            R.array.itemList,
+            R.layout.spinner_layout
+        ).also { adapter ->
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            genre.adapter = adapter
+        }
 
         var selectionNum = 0
 

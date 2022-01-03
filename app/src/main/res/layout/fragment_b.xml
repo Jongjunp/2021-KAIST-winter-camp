@@ -44,7 +44,7 @@
             android:layout_height="match_parent"
             android:padding="150dp"
             android:visibility="visible"
-            android:src="@drawable/no_image" />
+            android:src="@drawable/ic_baseline_image_not_supported_24" />
 
     </FrameLayout>
 

@@ -13,4 +13,5 @@
     <color name="tab_color_1">#FFE6EA</color>
     <color name="tab_color_2">#9398F1</color>
     <color name="tab_color_3">#01ce75</color>
+    <color name="gray">#CCCCCC</color>
 </resources>

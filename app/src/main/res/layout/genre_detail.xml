@@ -24,7 +24,7 @@
             android:layout_marginTop="30dp"
             android:textSize="24sp"
             android:textColor="@color/black"
-            android:fontFamily="@font/nanumgothic"
+            android:fontFamily="@font/elicedigitalbaeum"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,7 +62,7 @@
                     android:id="@+id/noData_image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/nodata"
+                    android:src="@drawable/ic_baseline_cloud_off_24"
                     android:layout_gravity="center"
                     android:visibility="invisible"
                     app:layout_constraintTop_toTopOf="parent"
@@ -76,8 +76,9 @@
                     android:textAlignment="center"
                     android:visibility="invisible"
                     android:text="No Data to Show!"
+                    android:fontFamily="@font/elicedigitalbaeum"
                     android:textSize="20sp"
-                    android:textColor="@color/background_gray"
+                    android:textColor="@color/gray"
                     app:layout_constraintTop_toBottomOf="@id/noData_image"/>
             </LinearLayout>
 

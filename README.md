@@ -11,10 +11,10 @@
  - json 파일로 저장된 연락처 목록을 탭화면에 불러옴 
  - 연락처 클릭 시, 통화 다이얼로 연결됨
 
-
-
- ![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/KakaoTalk_20220103_163717928.png)
- ![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/KakaoTalk_20220103_163717928_01.png)
+|연락처 목록|연락처 다이얼 연결|
+|:-:|:-:|
+|![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/Screenshots/Screenshot_20220104-122426.jpg)|![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/Screenshots/Screenshot_20220104-122452_Phone.jpg)|
+ 
  
  ## Tab2: 갤러리
  ---------------------------
@@ -24,12 +24,10 @@
  - 갤러리의 사진 클릭 시, 해당 영화의 리뷰, 장르 그리고 평점을 수정하거나 해당 리뷰를 삭제할 수 있음
 
 
-
- ![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/KakaoTalk_20220103_164119669.png)
- ![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/KakaoTalk_20220103_164151134.png)
- ![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/KakaoTalk_20220103_164253662.png)
- ![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/KakaoTalk_20220103_164341863.png)
-
+|갤러리|새 항목 추가|항목 수정|
+|:-:|:-:|:-:|
+|![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/Screenshots/Screenshot_20220104-122500.jpg)|![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/Screenshots/Screenshot_20220104-122508.jpg)|![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/Screenshots/Screenshot_20220104-122519.jpg)|
+ 
 ## Tab3: 평점 정보
 ----------------------------
 - 두번째 탭에서 등록한 영화의 장르별 평점 정보를 볼 수 있음
@@ -38,6 +36,6 @@
 
 
 
-
-![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/KakaoTalk_20220103_164609862.png)
-![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/KakaoTalk_20220103_164609862_01.png)
+|장르 목록|평점 차트|
+|:-:|:-:|
+|![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/Screenshots/Screenshot_20220104-122529.jpg)|![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/Screenshots/Screenshot_20220104-122540.jpg)|

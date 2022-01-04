@@ -1,9 +1,6 @@
 package com.example.commontask1_pjj
 
-import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.os.Bundle
 import android.preference.PreferenceManager
@@ -12,19 +9,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.gson.Gson
-import java.io.ByteArrayOutputStream
-import java.util.*
 import kotlin.collections.ArrayList
 
 class BFragment : Fragment() {
@@ -96,10 +86,6 @@ class BFragment : Fragment() {
         }
         //나중에 최적화하기
         dataArray.clear()
-
-        //var json = appSharedPrefs.getString(i.toString(), "")
-        //var obj = gson.fromJson(json, ReviewData::class.java)
-        //dataArray.add(DataVo(obj.movieImage!!,obj.movieTitle!!,obj.movieRating!!))
 
         while(i2.hasNext()){
             val nextKey2 = i2.next()

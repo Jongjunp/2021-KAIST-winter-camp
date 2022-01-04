@@ -1,8 +1,7 @@
 package com.example.commontask1_pjj
 
-import android.graphics.drawable.Drawable
 
-//각 item에 필요한 data
+//각 연락처 item data
 data class ListItem(
     val name: String,
     val phone: String

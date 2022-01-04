@@ -2,19 +2,13 @@ package com.example.commontask1_pjj
 
 import android.content.Intent
 import android.os.Bundle
-import android.preference.PreferenceManager
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.commontask1_pjj.R
-import com.google.gson.Gson
-import org.json.JSONObject
 
 class CFragment : Fragment() {
     private val dataArray = ArrayList<genreItem>()
@@ -34,12 +28,14 @@ class CFragment : Fragment() {
         dataArray.add(genreItem("공포/스릴러"))
         dataArray.add(genreItem("기타"))
 
-
+        //장르 목록 recycler view
         recyclerView1 = rootView.findViewById(R.id.recyclerView)as RecyclerView
         recyclerView1.layoutManager = LinearLayoutManager(requireContext())
 
         var adapter = ViewAdapterC(requireContext(), dataArray)
         recyclerView1.adapter = adapter
+
+        //장르 item 클릭 시 GenreActivity로 intent
         adapter.setOnItemClickListener(object: ViewAdapterC.onItemClickListener{
             override fun onItemClick(position: Int) {
                 val intent = Intent(activity, GenreActivity::class.java)
@@ -47,8 +43,8 @@ class CFragment : Fragment() {
                 activity?.startActivity(intent)
             }
         })
-        recyclerView1.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
 
+        recyclerView1.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
 
         return rootView
     }

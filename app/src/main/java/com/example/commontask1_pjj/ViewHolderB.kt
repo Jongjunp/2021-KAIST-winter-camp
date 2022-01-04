@@ -1,23 +1,15 @@
 package com.example.commontask1_pjj
 
-import android.content.Intent
-import android.content.res.Resources
 import android.graphics.BitmapFactory
-import android.graphics.Canvas
 import android.graphics.Outline
-import android.graphics.drawable.BitmapDrawable
 import android.os.Build
 import android.util.Base64
 import android.view.View
 import android.view.ViewOutlineProvider
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
-import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.recyclerview.widget.RecyclerView
-import org.jetbrains.anko.find
-import org.w3c.dom.Text
 
 //뷰의 각 요소 관리
 class ViewHolderB(view: View) : RecyclerView.ViewHolder(view) {

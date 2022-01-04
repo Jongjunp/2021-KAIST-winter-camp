@@ -13,8 +13,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import java.io.ByteArrayOutputStream
 import java.util.*
-import java.util.Base64.Decoder
 
+//입력 review 수정 or 삭제 activity
 class GetReviewActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -23,7 +23,8 @@ class GetReviewActivity : AppCompatActivity() {
         setContentView(R.layout.get_review_detail)
 
         var intent = intent
-
+        
+        //shared preference data 읽어오기
         val appSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this.applicationContext)
         val gson = Gson()
         var json = appSharedPrefs.getString(intent.getStringExtra("keyTitle"), "")
@@ -38,7 +39,8 @@ class GetReviewActivity : AppCompatActivity() {
         val imageByte = Base64.getDecoder().decode(obj.movieImage)
         val bitmap = BitmapFactory.decodeByteArray(imageByte, 0, imageByte.size)
         image.setImageBitmap(bitmap)
-
+        
+        //읽어 온 data 화면에 표시
         title.text = obj.movieTitle
         review.setText(obj.movieReview)
         obj.movieRating?.let { rating.rating = it.toFloat() }
@@ -68,6 +70,7 @@ class GetReviewActivity : AppCompatActivity() {
         val completeButton = findViewById<Button>(R.id.complete_button2) as Button
         val deleteButton = findViewById<Button>(R.id.delete_button) as Button
 
+        //complete button 클릭시 수정 내용 저장
         completeButton.setOnClickListener(View.OnClickListener {
             val obj2 = ReviewData()
 
@@ -100,6 +103,7 @@ class GetReviewActivity : AppCompatActivity() {
 
         })
 
+        //delete button 클릭 시 shared preference에서 data 수정
         deleteButton.setOnClickListener(View.OnClickListener {
 
             val appSharedPrefs3 = PreferenceManager.getDefaultSharedPreferences(this.applicationContext)

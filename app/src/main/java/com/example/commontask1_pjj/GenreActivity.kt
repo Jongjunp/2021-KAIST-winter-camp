@@ -1,33 +1,21 @@
 package com.example.commontask1_pjj
 
-import android.content.Context
 import android.graphics.Color
-import android.graphics.Typeface
 import android.os.Bundle
 import android.preference.PreferenceManager
-import android.view.TextureView
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.github.mikephil.charting.animation.Easing
-import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.PieChart
-import com.github.mikephil.charting.components.Description
-import com.github.mikephil.charting.components.Legend
-import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.*
-import com.github.mikephil.charting.formatter.IValueFormatter
-import com.github.mikephil.charting.formatter.PercentFormatter
 import com.github.mikephil.charting.formatter.ValueFormatter
-import com.github.mikephil.charting.utils.ViewPortHandler
 import com.google.gson.Gson
-import java.text.NumberFormat
 
 class GenreActivity : AppCompatActivity() {
 
@@ -58,9 +46,6 @@ class GenreActivity : AppCompatActivity() {
         pieChart.setUsePercentValues(true)
 
         pieChart.description.isEnabled = false
-        //pieChart.description.textSize = 16f
-        //pieChart.centerText = "Ratings"
-        //pieChart.setCenterTextSize(20f)
 
         pieChart.setDrawEntryLabels(true)
         pieChart.setEntryLabelColor(resources.getColor(R.color.black))
@@ -68,13 +53,8 @@ class GenreActivity : AppCompatActivity() {
         val font = ResourcesCompat.getFont(this, R.font.elicedigitalbaeum)
         pieChart.setEntryLabelTypeface(font)
 
-
-        //pieChart.holeRadius = 30f
-        //pieChart.transparentCircleRadius = 40f
-
         pieChart.setExtraOffsets(25f, 0f, 25f, 0f)
 
-        //pieChart.legend.textSize = 20f
         pieChart.legend.isEnabled = false
     }
 
@@ -127,8 +107,6 @@ class GenreActivity : AppCompatActivity() {
             chart.visibility = View.INVISIBLE
             noDataImage.visibility = View.VISIBLE
             noDataText.visibility = View.VISIBLE
-
-
         }
 
         val pieDataSet = PieDataSet(entries, "")

@@ -1,37 +1,20 @@
 package com.example.commontask1_pjj
 
-import android.Manifest
-import android.Manifest.permission_group.STORAGE
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.graphics.Bitmap
-import android.graphics.Typeface
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.preference.PreferenceManager
-import android.provider.MediaStore
-import android.transition.Transition
-import android.util.Base64
-import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import com.bumptech.glide.Glide
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.gson.Gson
-import org.jetbrains.anko.imageBitmap
-import org.jetbrains.anko.spinner
 import java.io.ByteArrayOutputStream
 
 class ReviewActivity : AppCompatActivity() {
@@ -63,7 +46,8 @@ class ReviewActivity : AppCompatActivity() {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner.adapter = adapter
         }
-
+        
+        //complete button 클릭 시 입력된 data shared preference에 저장
         completeButton.setOnClickListener(View.OnClickListener {
             val inputImage = findViewById<View>(R.id.tempView) as ImageView
             val inputTitle = findViewById<View>(R.id.editTitle) as EditText
@@ -116,7 +100,6 @@ class ReviewActivity : AppCompatActivity() {
             if( requestCode == GALLERY)
             {
                 var ImageData: Uri? = data?.data
-                //Toast.makeText(this,ImageData.toString(), Toast.LENGTH_SHORT ).show()
                 try{
                     imageLoader.setVisibility(View.INVISIBLE)
                     tempView.setVisibility(View.VISIBLE)

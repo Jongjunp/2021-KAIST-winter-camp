@@ -3,10 +3,8 @@ package com.example.commontask1_pjj
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView

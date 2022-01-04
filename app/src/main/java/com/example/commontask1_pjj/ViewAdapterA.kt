@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ViewAdapterA(val context: Context, val dataArray: ArrayList<ListItem>) : RecyclerView.Adapter<ViewHolderA>() {
 
+    //목록의 item click listener
     interface onItemClickListener{
         fun onItemClick(position: Int)
     }
@@ -25,6 +26,7 @@ class ViewAdapterA(val context: Context, val dataArray: ArrayList<ListItem>) : R
         return dataArray.size
     }
 
+    //item bind
     override fun onBindViewHolder(holder: ViewHolderA, position: Int) {
         val item = dataArray[position]
         holder.bind(item)

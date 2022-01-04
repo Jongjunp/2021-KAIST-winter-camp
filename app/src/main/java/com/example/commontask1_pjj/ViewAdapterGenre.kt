@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
+//chart 보이는 activity 별점 list adapter
 class ViewAdapterGenre(val context: Context, val dataArray: ArrayList<PercentItem>) : RecyclerView.Adapter<ViewHolderGenre>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderGenre {

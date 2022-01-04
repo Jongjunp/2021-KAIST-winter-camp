@@ -4,12 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/font/font.xml" value="0.23489583333333333" />
-        <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/activity_main.xml" value="0.23956723338485317" />
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/activity_main.xml" value="0.2046875" />
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/fragment_a.xml" value="0.264" />
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/fragment_b.xml" value="0.2046875" />
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/genre_detail.xml" value="0.1" />
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/genre_detail_list.xml" value="0.1" />
+        <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/genre_list.xml" value="0.1" />
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/get_review_detail.xml" value="0.1" />
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/item_layout.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/sho20/Desktop/2021-KAIST-winter-camp/app/src/main/res/layout/rv_item.xml" value="0.1" />
@@ -23,7 +23,6 @@
         <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/drawable/tab_layout.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/drawable/tabround.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/layout/animation.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/layout/fragment_a.xml" value="0.26222826086956524" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/layout/fragment_b.xml" value="0.26222826086956524" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CommonTask1_PJJ/app/src/main/res/layout/fragment_c.xml" value="0.36614583333333334" />

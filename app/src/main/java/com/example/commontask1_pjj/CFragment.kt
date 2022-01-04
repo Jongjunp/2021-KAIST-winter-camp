@@ -44,8 +44,6 @@ class CFragment : Fragment() {
             }
         })
 
-        recyclerView1.addItemDecoration(DividerItemDecoration(context, DividerItemDecoration.VERTICAL))
-
         return rootView
     }
 

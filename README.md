@@ -14,7 +14,7 @@
 
 |앱 시작 Splash - Animation From [LottieFiles](https://lottiefiles.com/34441-movie-clapboard)|
 |:-:|
-|![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/Screenshot_20220104-140752.jpg)|
+|![](https://github.com/Jongjunp/2021-KAIST-winter-camp/blob/main/Camera%20Roll/Screenshot_20220104-163726.jpg)|
 
 
  
